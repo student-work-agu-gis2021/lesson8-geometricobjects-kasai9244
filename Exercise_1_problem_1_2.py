@@ -70,7 +70,9 @@ except Exception as e:
 
 
 # YOUR CODE HERE 4 to define create_poly_geom()
-
+def create_poly_geom(coords):
+  poly=Polygon(coords)
+  return poly
 # Demonstrate the usage of the function. For example, create a Polygon with three points: `(45.2, 22.34)`, `(100.22, -3.20)` & `(70.0, 10.20)`.
 
 # YOUR CODE HERE 5 to define poly1 with three points
