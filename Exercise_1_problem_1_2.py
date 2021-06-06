@@ -129,7 +129,8 @@ def get_centroid(geom):
   parameter:geom
   purpose:calculate centroid
   """
-  assert type(geom)==Point or type(geom)==LineString or type(geom)==Polygon,"Input should be a Shapely geometry!"
+  assert type(geom)=="shapely","Input should be a Shapely geometry!"
+  assert geom.geom_type in ["Point","LineString","Polygon"],"Input should be a Shapely geometry!"
   return geom.centroid
 # Test and demonstrate the usage of the function. You can, for example, create shapely objects using the functions you created in problem 1 and print out information about their centroids:
 # 
@@ -159,10 +160,10 @@ except Exception as e:
 # YOUR CODE HERE 8 to define get_area()
 def get_area(polygon):
   """
-  parameter:poly
+  parameter:polygon
   purpose:calculate area
   """
-  assert type()=="Polygon","Input should be a Shapely Polygon -object!"
+  assert type(polygon)=="Polygon","Input should be a Shapely Polygon -object!"
   return polygon.area
 # Test and demonstrate the usage of the function:
 get_area(poly1)
