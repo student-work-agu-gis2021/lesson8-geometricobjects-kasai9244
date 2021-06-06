@@ -30,8 +30,10 @@ print(point1.geom_type)
 
 # YOUR CODE HERE 2 to define create_line_geom()
 def create_line_geom(points):
-  line1=LineSring(points)
-  return line1
+  assert type(points)=="list","Input should be a list!"
+  assert len(points)>=2,"LineString object requires at least two Points!"
+  line = LineString([points[0],points[1]])
+  return line
 
 # Demonstrate the usage of your function; For example, create a line object with two points: `Point(45.2, 22.34)` & `Point(100.22, -3.20)` and store the result in a variable called `line1`:
 
@@ -76,7 +78,7 @@ def create_poly_geom(coords):
 # Demonstrate the usage of the function. For example, create a Polygon with three points: `(45.2, 22.34)`, `(100.22, -3.20)` & `(70.0, 10.20)`.
 
 # YOUR CODE HERE 5 to define poly1 with three points
-poly1 = 
+poly1 = 0
 
 # CODE FOR TESTING YOUR SOLUTION
 print(poly1)
