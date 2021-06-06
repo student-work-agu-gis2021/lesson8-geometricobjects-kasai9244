@@ -129,7 +129,7 @@ def get_centroid(geom):
   parameter:geom
   purpose:calculate centroid
   """
-  assert type(geom)=="Point" or type(geom)=="LineString" or type(geom)=="Polygon","Input should be a Shapely geometry!"
+  assert type(geom)==Point or type(geom)==LineString or type(geom)==Polygon,"Input should be a Shapely geometry!"
   return geom.centroid
 # Test and demonstrate the usage of the function. You can, for example, create shapely objects using the functions you created in problem 1 and print out information about their centroids:
 # 
@@ -188,7 +188,16 @@ except Exception as e:
 
 
 #  YOUR CODE HERE 9 to define get_length()
-
+def get_length(geom):
+  """
+  parameter:geom
+  purpose:calculate length
+  """
+  assert type(geom)=="LineString" or type(geom)=="Polygon","'geom' should be either LineString or Polygon!"
+  if geom.geom_type == "LineString":
+    return geom.length
+  elif geom.geom_type == "Polygon":
+    return geom.exterior.length
 # Test and demonstrate the usage of the function:
 
 get_length(poly1)
