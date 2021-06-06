@@ -13,7 +13,7 @@
 import pandas as pd 
 
 data = pd.read_table("data/travelTimes_2015_Helsinki.txt", sep=";",)
-data = data[['from_x','from_y', 'to_x', 'to_y', 'total_route_time',]]
+
 #Check how many rows and columns there are:
 data
 
@@ -27,7 +27,7 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data`
-
+data = data[['from_x','from_y', 'to_x', 'to_y', 'total_route_time',]]
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
 
